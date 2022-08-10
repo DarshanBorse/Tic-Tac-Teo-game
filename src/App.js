@@ -6,6 +6,7 @@ import { Card, CardBody, Container, Button, Col, Row } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import Icon from "./components/icon";
+import { Helmet } from "react-helmet";
 
 const itemArray = new Array(9).fill("empty");
 
@@ -70,6 +71,13 @@ const App = () => {
   return (
     <Container className="p-5">
       <ToastContainer position="bottom-center" />
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Tic Tac Teo</title>
+        <link rel="canonical" href="https://tic-tac-toe-game-react-zeta.vercel.app/" />
+        <meta name="description" content="Tic tac teo game" />
+        <link rel="icons" href="./../public/favicon.ico" />
+      </Helmet>
       <Row>
         <Col md={6} className="offset-md-3">
           {winMessage ? (
